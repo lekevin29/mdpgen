@@ -1,29 +1,36 @@
-<div class="bandeau">
-  <h1>Le générateur de mot de passe ta3 les fous</h1>
-</div>
-<div class="tout">
-  <div class="contenu">
-    <p>Longueur du mot de passe</p>
-    <button class="bouton" mat-flat-button color="accent" (click)="moins(1)">-</button>
-    {{longueur}}
-    <button class="bouton" mat-flat-button color="accent" (click)="plus(1)">+</button>
+<div class="appli">
+  <div class="bandeau">
+    Générateur de mot de passe
   </div>
-  <div class="options">
-    <mat-checkbox [(ngModel)]="checkMajuscules">Majuscules</mat-checkbox>
-    <mat-checkbox [(ngModel)]="checkMinuscules">Minuscules</mat-checkbox>
-    <mat-checkbox [(ngModel)]="checkChiffres">Chiffres</mat-checkbox>
-    <mat-checkbox [(ngModel)]="checkCaracteresSpeciaux">Caractères spéciaux</mat-checkbox>
-  </div>
-  <div class="motdepasse">
-    <button (click)="generer()" mat-raised-button color="primary">Générer un mot de passe</button>
-    {{mdp}}
-    <button [cdkCopyToClipboard]="mdp" mat-raised-button color="primary" disabled="{{!checkMotDePasse}}">Copier le mot
-      de passe</button>
-  </div>
-  <div class="barre">
-    <mat-progress-bar mode="determinate" value="{{solidite}}"></mat-progress-bar>
-  </div>
-  <div class="ouaisouais">
-    <p>{{phraseSolidite}}</p>
+  <div class="tout">
+    <div class="contenu">
+      <div style="text-align: center;">
+        Longueur du mot de passe
+      </div>
+      <div class="boutons">
+        <button class="bouton" mat-flat-button color="accent" (click)="moins(1)">-</button>
+        {{longueur}}
+        <button class="bouton" mat-flat-button color="accent" (click)="plus(1)">+</button>
+      </div>
+    </div>
+    <div class="options">
+      <mat-checkbox [(ngModel)]="checkMajuscules">Majuscules</mat-checkbox>
+      <mat-checkbox [(ngModel)]="checkMinuscules">Minuscules</mat-checkbox>
+      <mat-checkbox [(ngModel)]="checkChiffres">Chiffres</mat-checkbox>
+      <mat-checkbox [(ngModel)]="checkCaracteresSpeciaux">Caractères spéciaux</mat-checkbox>
+    </div>
+    <div class="motdepasse">
+      <button (click)="generer()" mat-raised-button color="primary">Générer un mot de passe</button>
+      {{mdp}}
+      <button [cdkCopyToClipboard]="mdp" mat-stroked-button color="accent" disabled="{{!checkMotDePasse}}">Copier le
+        mot
+        de passe</button>
+    </div>
+    <div class="barre">
+      <mat-progress-bar mode="determinate" value="{{solidite}}"></mat-progress-bar>
+    </div>
+    <div class="phrase">
+      {{phraseSolidite}}
+    </div>
   </div>
 </div>
