@@ -21,7 +21,9 @@
     </div>
     <div class="motdepasse">
       <button (click)="generer()" mat-raised-button color="primary">Générer un mot de passe</button>
-      {{mdp}}
+      <span class="mdp">
+        {{mdp}}
+      </span>
       <button [cdkCopyToClipboard]="mdp" mat-stroked-button color="accent" disabled="{{!checkMotDePasse}}">Copier le
         mot
         de passe</button>
