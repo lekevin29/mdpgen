@@ -86,16 +86,16 @@ export class AppComponent {
     this.solidite = Math.round(this.solidite);
 
     if (this.solidite <= 25) {
-      this.phraseSolidite = 'ton mot de passe il est naze';
+      this.phraseSolidite = 'Mot de passe très faible';
     }
     else if (this.solidite <= 50) {
-      this.phraseSolidite = 'ton mot de passe il est pas ouf';
+      this.phraseSolidite = 'Mot de passe faible';
     }
     else if (this.solidite <= 75) {
-      this.phraseSolidite = 'ton mot de passe il est bien ';
+      this.phraseSolidite = 'Mot de passe sécurisé';
     }
     else if (this.solidite <= 100) {
-      this.phraseSolidite = 'ton mot de passe il est sécurisé de fou';
+      this.phraseSolidite = 'Mot de passe très sécurisé';
     }
   }
 }
